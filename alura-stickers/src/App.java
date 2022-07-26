@@ -5,7 +5,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
-import java.security.Key;
 import java.util.List;
 import java.util.Map;
 
@@ -25,7 +24,9 @@ public class App {
         
         // Choosing which fields to extract and showing the extracted data
         for (Map<String,String> movie : movieList) {
-            System.out.println(movie.get(key:"title"));
+            System.out.println(movie.get("title"));
+            System.out.println(movie.get("image"));
+            System.out.println(movie.get("imDbRating"));
         }  
     }
 }
